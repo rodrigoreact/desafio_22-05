@@ -1,0 +1,18 @@
+<h1>Mostrando el contenidos de las series index</h1>
+
+<h5 class="text-danger">
+  <%= @series.count  %>
+</h5>
+<div class="my-5">
+    <% @series.each do |serie|  %>
+        <div class="mb-5">
+            <h5>Nombre:<%= serie.name %></h5>
+            <p>Synopsis:<%= serie.synopsis %></p>
+            <p>Director: <%= serie.director %></p>
+        </div>
+    <% end %>
+</div>
+
+<div class="my-5">
+    <%= link_to "Crear Serie", serie_new_path, class:"btn btn-primary" %>
+</div>

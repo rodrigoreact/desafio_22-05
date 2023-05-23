@@ -1,0 +1,20 @@
+<h1>Formulario Documental New</h1>
+<%= form_with model: @documentary_film, method: :documentary_film do | form | %>
+    <div class="col-4">
+        <div class="mb-3">
+        <%= form.label :name, "Nombre", class: "form-label" %>
+        <%= form.text_field :name, class: "form-control" %>
+        </div>
+    </div>
+    <div class="mb-5">
+        <%= form.label :synopsis, "Synopsis", class: "form-label" %>
+        <%= form.text_area :synopsis, class: "form-control" %>
+    </div>
+    <div class="mb-5">
+        <%= form.label :director, "Director", class: "form-label" %>
+        <%= form.text_field :director, class: "form-control" %>
+    </div>
+    <div class="col-4">
+        <%= form.submit "Enviar", class: "btn btn-primary" %>
+    </div>
+<% end %>

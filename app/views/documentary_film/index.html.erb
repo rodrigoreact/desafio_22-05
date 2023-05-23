@@ -1,0 +1,19 @@
+<h1>Mostrando el contenidos de las Documentales index</h1>
+
+<h5 class="text-danger">
+  <%= @documentaryFilms.count  %>
+</h5>
+<div class="my-5">
+    <% @documentaryFilms.each do |documentary_film|  %>
+        <div class="mb-5">
+            <h5>Nombre:<%= documentary_film.name %></h5>
+            <p>Synopsis:<%= documentary_film.synopsis %></p>
+            <p>Director: <%= documentary_film.director %></p>
+        </div>
+    <% end %>
+</div>
+
+<div class="my-5">
+    <%= link_to "Crear documental", documentary_film_new_path, class:"btn btn-primary" %>
+</div>
+

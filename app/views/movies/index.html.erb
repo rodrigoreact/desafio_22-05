@@ -1,0 +1,18 @@
+<h1>Mostrando el contenido de Peliculas index.</h1>
+
+<h5 class="text-danger">
+  <%= @movies.count  %>
+</h5>
+<div class="my-5">
+    <% @movies.each do |movie|  %>
+        <div class="mb-5">
+            <h5>Nombre:<%= movie.name %></h5>
+            <p>Synopsis:<%= movie.synopsis %></p>
+            <p>Director: <%= movie.director %></p>
+        </div>
+    <% end %>
+</div>
+
+<div class="my-5">
+    <%= link_to "Crear Pelicula", movies_new_path, class:"btn btn-primary" %>
+</div>
